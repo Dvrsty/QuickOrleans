@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Quick.Dto</name>
+    </assembly>
+    <members>
+        <member name="P:Quick.Dto.HelloOutput.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Quick.Dto.HelloOutput.Text">
+            <summary>
+            text
+            </summary>
+        </member>
+    </members>
+</doc>

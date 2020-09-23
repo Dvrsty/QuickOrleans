@@ -1,0 +1,53 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>f2e717eb-b026-46a6-aee8-f0a3e553b39c</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\projects\Quick\Quick.Api\Quick.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="static\upload\**" />
+    <Content Remove="static\upload\**" />
+    <EmbeddedResource Remove="static\upload\**" />
+    <None Remove="static\upload\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Quick.DI\Quick.DI.csproj" />
+    <ProjectReference Include="..\Quick.IService\Quick.IService.csproj" />
+    <ProjectReference Include="..\Quick.Service\Quick.Service.csproj" />
+    <ProjectReference Include="..\Quick.Web.Framework\Quick.Web.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Orleans.Core" Version="3.2.2" />
+    <PackageReference Include="Microsoft.Orleans.OrleansRuntime" Version="3.2.2" />
+    <PackageReference Include="Orleans.Clustering.Redis.Fork.Qpippop" Version="3.1.4" />
+    <PackageReference Include="Orleans.Persistence.Redis" Version="3.0.1" />
+    <PackageReference Include="OrleansDashboard" Version="3.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="static\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="https://json.schemastore.org/babelrc" /></VisualStudio></ProjectExtensions>
+
+
+</Project>

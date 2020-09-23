@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Quick.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Quick.Api.Controllers.BaseController">
+            <summary>
+             基础管理
+            </summary>
+        </member>
+        <member name="P:Quick.Api.Controllers.BaseController.UserIp">
+            <summary>
+            当前连接IP地址
+            </summary>
+        </member>
+        <member name="P:Quick.Api.Controllers.BaseController.CurrentToken">
+            <summary>
+            当前请求token
+            </summary>
+        </member>
+        <member name="T:Quick.Api.Controllers.UserBaseController">
+            <summary>
+             用户基础管理
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Controllers.UserBaseController.#ctor(Quick.Tokens.ITokenManager)">
+            <summary>
+            
+            </summary>
+            <param name="tokenManager"></param>
+        </member>
+        <member name="M:Quick.Api.Controllers.UserBaseController.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Quick.Api.Controllers.HelloController">
+            <summary>
+            Hello world
+            </summary>
+        </member>
+        <member name="T:Quick.Api.Filters.UserAuthorizeFilter">
+            <summary>
+             权限过滤
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Filters.UserAuthorizeFilter.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="cacheManager"></param>
+        </member>
+        <member name="P:Quick.Api.Filters.UserAuthorizeFilter.Name">
+            <summary>
+             权限名称
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Filters.UserAuthorizeFilter.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Quick.Api.Handler.UserStore">
+            <summary>
+             用户权限
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Handler.UserStore.#ctor(Quick.Cache.ICacheManager)">
+            <summary>
+            
+            </summary>
+            <param name="cacheManager"></param>
+        </member>
+        <member name="M:Quick.Api.Handler.UserStore.PermissionCheck(System.Int64,System.String)">
+            <summary>
+             权限检查
+            </summary>
+            <param name="userId"></param>
+            <param name="permission"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Quick.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Quick.Api.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Quick.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:Quick.Api.Swagger.AddTokenHeaderParameter">
+            <summary>
+             swagger 参数添加token
+            </summary>
+        </member>
+        <member name="M:Quick.Api.Swagger.AddTokenHeaderParameter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

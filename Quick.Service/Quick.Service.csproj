@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Orleans.Core" Version="3.2.2" />
+    <PackageReference Include="Microsoft.Orleans.Core.Abstractions" Version="3.2.2" />
+    <PackageReference Include="Microsoft.Orleans.OrleansCodeGenerator.Build" Version="3.2.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Quick.Cache\Quick.Cache.csproj" />
+    <ProjectReference Include="..\Quick.Core\Quick.Core.csproj" />
+    <ProjectReference Include="..\Quick.Interface\Quick.Interface.csproj" />
+    <ProjectReference Include="..\Quick.IRepository\Quick.IRepositories.csproj" />
+    <ProjectReference Include="..\Quick.IService\Quick.IService.csproj" />
+    <ProjectReference Include="..\Quick.Model\Quick.Model.csproj" />
+    <ProjectReference Include="..\Quick.Tokens\Quick.Tokens.csproj" />
+  </ItemGroup>
+
+</Project>
